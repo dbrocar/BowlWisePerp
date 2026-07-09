@@ -75,7 +75,7 @@ export default function App() {
             <div className="caloriesBlock">
               <div className="caloriesTitle">
                 <Flame size={24} color="#1d8f6a" />
-                Today's Calories
+                Today&apos;s Calories
               </div>
               <div className="caloriesSub">2113 kcal remaining for today</div>
               <div className="macroRow">
