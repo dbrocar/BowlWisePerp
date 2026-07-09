@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: #f4f6f8;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.appShell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fafafa 0%, #f3f5f7 100%);
+  color: #222;
+}
+
+.phone {
+  max-width: 760px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid #efefef;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #188a63;
+  display: grid;
+  place-items: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.menu {
+  width: 28px;
+  height: 28px;
+  opacity: 0.75;
+}
+
+.content {
+  padding: 24px 22px 30px;
+}
+
+.hero {
+  margin-bottom: 22px;
+}
+
+.date {
+  font-size: 20px;
+  color: #a0a0a0;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 38px;
+  line-height: 1.05;
+  font-weight: 800;
+  margin: 0;
+  color: #222;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: 30px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.ringCard {
+  padding: 28px 24px 22px;
+  margin: 24px 0;
+}
+
+.ringWrap {
+  display: grid;
+  place-items: center;
+  padding: 10px 0 16px;
+}
+
+.ring {
+  width: 236px;
+  height: 236px;
+  border-radius: 50%;
+  border: 16px solid #f1f1f1;
+  display: grid;
+  place-items: center;
+}
+
+.ringInner {
+  text-align: center;
+}
+
+.ringValue {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  color: #222;
+}
+
+.ringSub {
+  font-size: 18px;
+  color: #a0a0a0;
+  margin-top: 6px;
+}
+
+.caloriesBlock {
+  padding: 0 8px 10px;
+}
+
+.caloriesTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.caloriesSub {
+  font-size: 18px;
+  color: #a0a0a0;
+  margin-bottom: 14px;
+}
+
+.macroRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  font-size: 16px;
+  color: #a0a0a0;
+}
+
+.macroRow b {
+  color: #666;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.miniCard {
+  padding: 22px;
+  border-radius: 28px;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.04);
+  min-height: 176px;
+}
+
+.chip {
+  width: 70px;
+  height: 70px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 26px;
+}
+
+.chip.green {
+  background: #eefbf5;
+  color: #1d8f6a;
+}
+.chip.blue {
+  background: #eef7ff;
+  color: #2d7dd2;
+}
+.chip.amber {
+  background: #fff8ea;
+  color: #d99012;
+}
+.chip.pink {
+  background: #fff0f4;
+  color: #d84b78;
+}
+
+.miniValue {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+  color: #222;
+}
+
+.miniLabel {
+  font-size: 22px;
+  color: #9c9c9c;
+  margin-top: 8px;
+}
+
+.sectionCard {
+  padding: 22px;
+  margin-top: 18px;
+  border-radius: 28px;
+}
+
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 4px 14px;
+}
+
+.sectionHead h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #222;
+}
+
+.link {
+  color: #1d8f6a;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.mealItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 18px;
+  border-radius: 22px;
+  background: #fafafa;
+  margin: 12px 0;
+}
+
+.mealLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mealIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  color: #7c7c7c;
+  border: 1px solid #efefef;
+}
+
+.mealTitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: #222;
+}
+
+.mealDetail {
+  font-size: 18px;
+  color: #acacac;
+}
+
+.kcal {
+  font-size: 24px;
+  font-weight: 700;
+  color: #555;
+}
+
+.trendBars {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  height: 130px;
+  padding: 10px 0 0;
+}
+
+.barWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 16px 16px 8px 8px;
+  background: linear-gradient(180deg, #35b27f, #177b5f);
+}
+
+.barDay {
+  font-size: 14px;
+  color: #919191;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0 10px;
+}
+
+.tabBtn {
+  border: 1px solid #e8e8e8;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #666;
+}
+
+.tabBtn.active {
+  background: #188a63;
+  color: white;
+  border-color: #188a63;
+}
+
+@media (max-width: 640px) {
+  .content {
+    padding: 20px 16px 26px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .date {
+    font-size: 18px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .miniValue {
+    font-size: 36px;
+  }
+
+  .miniLabel {
+    font-size: 18px;
+  }
+
+  .mealTitle {
+    font-size: 20px;
+  }
+
+  .mealDetail,
+  .kcal,
+  .sectionHead h2,
+  .link {
+    font-size: 16px;
+  }
+}
