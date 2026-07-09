@@ -5,27 +5,37 @@
 html,
 body,
 #root {
-  margin: 0;
+  width: 100%;
   min-height: 100%;
+  margin: 0;
   background: #f4f6f8;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 body {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
+  overflow-x: hidden;
 }
 
 .appShell {
   min-height: 100vh;
+  padding:
+    calc(12px + env(safe-area-inset-top))
+    calc(12px + env(safe-area-inset-right))
+    calc(12px + env(safe-area-inset-bottom))
+    calc(12px + env(safe-area-inset-left));
   background: linear-gradient(180deg, #fafafa 0%, #f3f5f7 100%);
   color: #222;
 }
 
 .phone {
-  max-width: 760px;
+  width: min(100%, 980px);
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   background: #fff;
+  border-radius: 28px;
+  overflow: hidden;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
@@ -63,7 +73,7 @@ body {
 }
 
 .content {
-  padding: 24px 22px 30px;
+  padding: 28px 22px 30px;
 }
 
 .hero {
@@ -187,14 +197,17 @@ body {
   background: #eefbf5;
   color: #1d8f6a;
 }
+
 .chip.blue {
   background: #eef7ff;
   color: #2d7dd2;
 }
+
 .chip.amber {
   background: #fff8ea;
   color: #d99012;
 }
+
 .chip.pink {
   background: #fff0f4;
   color: #d84b78;
@@ -331,7 +344,33 @@ body {
   border-color: #188a63;
 }
 
+@media (min-width: 900px) {
+  .content {
+    padding: 32px;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .ringCard {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .sectionCard {
+    padding: 26px;
+  }
+}
+
 @media (max-width: 640px) {
+  .phone {
+    border-radius: 0;
+  }
+
   .content {
     padding: 20px 16px 26px;
   }
